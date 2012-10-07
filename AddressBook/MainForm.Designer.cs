@@ -1,6 +1,6 @@
 ﻿namespace AddressBook
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// 必要なデザイナ変数です。
@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -43,7 +50,7 @@
             this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.nameIndex = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -68,13 +75,6 @@
             this.DetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.nameIndex.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -96,8 +96,51 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowTemplate.Height = 21;
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(706, 285);
             this.dataGridView.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "姓";
+            this.Column1.HeaderText = "姓";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "名";
+            this.Column2.HeaderText = "名";
+            this.Column2.Name = "Column2";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "郵便番号";
+            this.Column6.HeaderText = "郵便番号";
+            this.Column6.Name = "Column6";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "都道府県";
+            this.Column3.HeaderText = "都道府県";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "市区町村";
+            this.Column4.HeaderText = "市区町村";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "番地";
+            this.Column5.HeaderText = "番地";
+            this.Column5.Name = "Column5";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "建物";
+            this.Column7.HeaderText = "建物";
+            this.Column7.Name = "Column7";
             // 
             // radioButton1
             // 
@@ -275,14 +318,15 @@
             this.button1.Text = "登録";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // updateButton
             // 
-            this.button2.Location = new System.Drawing.Point(659, 462);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "更新";
-            this.button2.UseVisualStyleBackColor = true;
+            this.updateButton.Location = new System.Drawing.Point(659, 462);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(75, 23);
+            this.updateButton.TabIndex = 15;
+            this.updateButton.Text = "更新";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // button3
             // 
@@ -454,49 +498,7 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "姓";
-            this.Column1.HeaderText = "姓";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "名";
-            this.Column2.HeaderText = "名";
-            this.Column2.Name = "Column2";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "郵便番号";
-            this.Column6.HeaderText = "郵便番号";
-            this.Column6.Name = "Column6";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "都道府県";
-            this.Column3.HeaderText = "都道府県";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "市区町村";
-            this.Column4.HeaderText = "市区町村";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "番地";
-            this.Column5.HeaderText = "番地";
-            this.Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "建物";
-            this.Column7.HeaderText = "建物";
-            this.Column7.Name = "Column7";
-            // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -507,14 +509,14 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nameIndex);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "住所録メイン";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.nameIndex.ResumeLayout(false);
             this.nameIndex.PerformLayout();
@@ -542,7 +544,7 @@
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.GroupBox nameIndex;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;

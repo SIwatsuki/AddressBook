@@ -11,6 +11,7 @@ C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressB
 C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressBook\AddressBook\bin\Debug\AddressBook.exe
 C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
 C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressBook\AddressBook\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressBook\AddressBook\obj\Debug\AddressBook.Form1.resources
 C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
 C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressBook\AddressBook\obj\Debug\AddressBook.csproj.GenerateResource.Cache
+C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressBook\AddressBook\obj\Debug\AddressBook.MainForm.resources
+C:\Documents and Settings\USER\My Documents\Visual Studio 2008\Projects\AddressBook\AddressBook\obj\Debug\AddressBook.DataForm.resources
