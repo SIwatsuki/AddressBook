@@ -68,10 +68,6 @@ namespace AddressBook
             }
 
             DataRow resultDataRow = DataForm.GetUpdatedData((DataTable)dataGridView.DataSource, selectedDataRow);
-            //selectedDataRow.Delete();
-            //dataTableInDataGridView.Rows.
-            //dataTableInDataGridView.ImportRow(resultDataRow);
-
 
             int selectedRowIndex = 0;
             for (int i = 0; i < dataTableInDataGridView.Rows.Count; i++)
@@ -79,9 +75,16 @@ namespace AddressBook
                 if (this.dataGridView.Rows[i].Selected)
                 {
                     selectedRowIndex = i;
+                    break;
                 }
             }
 
+            for (int i = 0; i < dataTableInDataGridView.Columns.Count; i++)
+            {
+                dataTableInDataGridView.Rows[selectedRowIndex][dataTableInDataGridView.Columns[i].ColumnName] = resultDataRow[dataTableInDataGridView.Columns[i].ColumnName];
+            }
+
+            /*
             dataTableInDataGridView.Rows[selectedRowIndex]["姓"] = resultDataRow["姓"];
             dataTableInDataGridView.Rows[selectedRowIndex]["名"] = resultDataRow["名"];
             dataTableInDataGridView.Rows[selectedRowIndex]["姓_ふりがな"] = resultDataRow["姓_ふりがな"];
@@ -93,6 +96,7 @@ namespace AddressBook
             dataTableInDataGridView.Rows[selectedRowIndex]["市区町村"] = resultDataRow["市区町村"];
             dataTableInDataGridView.Rows[selectedRowIndex]["番地"] = resultDataRow["番地"];
             dataTableInDataGridView.Rows[selectedRowIndex]["建物"] = resultDataRow["建物"];
+            */
         }
 
         /// <summary>
