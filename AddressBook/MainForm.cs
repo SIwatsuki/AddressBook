@@ -69,6 +69,12 @@ namespace AddressBook
 
             DataRow resultDataRow = DataForm.GetUpdatedData((DataTable)dataGridView.DataSource, selectedDataRow);
 
+            // 閉じる押したとかで戻り値が取れない場合処理を抜ける
+            if (null == resultDataRow)
+            {
+                return;
+            }
+
             int selectedRowIndex = 0;
             for (int i = 0; i < dataTableInDataGridView.Rows.Count; i++)
             {
@@ -83,20 +89,6 @@ namespace AddressBook
             {
                 dataTableInDataGridView.Rows[selectedRowIndex][dataTableInDataGridView.Columns[i].ColumnName] = resultDataRow[dataTableInDataGridView.Columns[i].ColumnName];
             }
-
-            /*
-            dataTableInDataGridView.Rows[selectedRowIndex]["姓"] = resultDataRow["姓"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["名"] = resultDataRow["名"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["姓_ふりがな"] = resultDataRow["姓_ふりがな"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["名_ふりがな"] = resultDataRow["名_ふりがな"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["TEL"] = resultDataRow["TEL"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["Mail"] = resultDataRow["Mail"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["郵便番号"] = resultDataRow["郵便番号"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["都道府県"] = resultDataRow["都道府県"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["市区町村"] = resultDataRow["市区町村"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["番地"] = resultDataRow["番地"];
-            dataTableInDataGridView.Rows[selectedRowIndex]["建物"] = resultDataRow["建物"];
-            */
         }
 
         /// <summary>
@@ -117,6 +109,27 @@ namespace AddressBook
                 }
             }
             return null;
+        }
+
+        /// <summary>
+        /// 登録ボタン押下イベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void registButton_Click(object sender, EventArgs e)
+        {
+            DataRow newRow = dataTableInDataGridView.NewRow();
+            DataRow retNewRow = DataForm.RegistNewData((DataTable)dataGridView.DataSource,newRow);
+            if (null != retNewRow)
+            {
+                dataTableInDataGridView.Rows.Add(newRow);
+
+                for (int i = 0; i < dataTableInDataGridView.Columns.Count; i++)
+                {
+                    dataTableInDataGridView.Rows[dataTableInDataGridView.Rows.Count-1][dataTableInDataGridView.Columns[i].ColumnName]
+                        = retNewRow[dataTableInDataGridView.Columns[i].ColumnName];
+                }
+            }
         }
 
     }

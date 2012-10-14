@@ -69,7 +69,7 @@
             this.label2.Location = new System.Drawing.Point(31, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 12);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 4;
             this.label2.Text = "ふりがな（姓）";
             // 
             // label3
@@ -78,7 +78,7 @@
             this.label3.Location = new System.Drawing.Point(262, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 12);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 1;
             this.label3.Text = "名";
             // 
             // label4
@@ -87,7 +87,7 @@
             this.label4.Location = new System.Drawing.Point(262, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 12);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 5;
             this.label4.Text = "ふりがな（名）";
             // 
             // label5
@@ -96,7 +96,7 @@
             this.label5.Location = new System.Drawing.Point(33, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 12);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 8;
             this.label5.Text = "℡";
             // 
             // label6
@@ -105,7 +105,7 @@
             this.label6.Location = new System.Drawing.Point(264, 156);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 12);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 9;
             this.label6.Text = "メール";
             // 
             // label7
@@ -114,7 +114,7 @@
             this.label7.Location = new System.Drawing.Point(33, 197);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(17, 12);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 12;
             this.label7.Text = "〒";
             // 
             // label8
@@ -123,7 +123,7 @@
             this.label8.Location = new System.Drawing.Point(33, 280);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 12);
-            this.label8.TabIndex = 7;
+            this.label8.TabIndex = 14;
             this.label8.Text = "都道府県";
             // 
             // label9
@@ -132,7 +132,7 @@
             this.label9.Location = new System.Drawing.Point(33, 322);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 12);
-            this.label9.TabIndex = 8;
+            this.label9.TabIndex = 18;
             this.label9.Text = "番地";
             // 
             // label10
@@ -141,7 +141,7 @@
             this.label10.Location = new System.Drawing.Point(264, 280);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 12);
-            this.label10.TabIndex = 9;
+            this.label10.TabIndex = 15;
             this.label10.Text = "市区町村";
             // 
             // label11
@@ -150,7 +150,7 @@
             this.label11.Location = new System.Drawing.Point(264, 322);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 12);
-            this.label11.TabIndex = 10;
+            this.label11.TabIndex = 19;
             this.label11.Text = "建物";
             // 
             // closeButton
@@ -158,16 +158,17 @@
             this.closeButton.Location = new System.Drawing.Point(384, 396);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
-            this.closeButton.TabIndex = 11;
+            this.closeButton.TabIndex = 23;
             this.closeButton.Text = "閉じる";
             this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // Button
             // 
             this.Button.Location = new System.Drawing.Point(303, 396);
             this.Button.Name = "Button";
             this.Button.Size = new System.Drawing.Size(75, 23);
-            this.Button.TabIndex = 12;
+            this.Button.TabIndex = 22;
             this.Button.Text = "更新";
             this.Button.UseVisualStyleBackColor = true;
             this.Button.Click += new System.EventHandler(this.Button_Click);
@@ -177,7 +178,7 @@
             this.fNameTextBox.Location = new System.Drawing.Point(33, 49);
             this.fNameTextBox.Name = "fNameTextBox";
             this.fNameTextBox.Size = new System.Drawing.Size(191, 19);
-            this.fNameTextBox.TabIndex = 13;
+            this.fNameTextBox.TabIndex = 2;
             // 
             // prefComboBox
             // 
@@ -185,70 +186,70 @@
             this.prefComboBox.Location = new System.Drawing.Point(35, 295);
             this.prefComboBox.Name = "prefComboBox";
             this.prefComboBox.Size = new System.Drawing.Size(191, 20);
-            this.prefComboBox.TabIndex = 14;
+            this.prefComboBox.TabIndex = 16;
             // 
             // telNoTextBox
             // 
             this.telNoTextBox.Location = new System.Drawing.Point(35, 171);
             this.telNoTextBox.Name = "telNoTextBox";
             this.telNoTextBox.Size = new System.Drawing.Size(191, 19);
-            this.telNoTextBox.TabIndex = 15;
+            this.telNoTextBox.TabIndex = 10;
             // 
             // eMailTextBox
             // 
             this.eMailTextBox.Location = new System.Drawing.Point(268, 171);
             this.eMailTextBox.Name = "eMailTextBox";
             this.eMailTextBox.Size = new System.Drawing.Size(191, 19);
-            this.eMailTextBox.TabIndex = 16;
+            this.eMailTextBox.TabIndex = 11;
             // 
             // zipCodeTextBox
             // 
             this.zipCodeTextBox.Location = new System.Drawing.Point(35, 212);
             this.zipCodeTextBox.Name = "zipCodeTextBox";
             this.zipCodeTextBox.Size = new System.Drawing.Size(191, 19);
-            this.zipCodeTextBox.TabIndex = 17;
+            this.zipCodeTextBox.TabIndex = 13;
             // 
             // addressTextBox
             // 
             this.addressTextBox.Location = new System.Drawing.Point(35, 337);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(191, 19);
-            this.addressTextBox.TabIndex = 19;
+            this.addressTextBox.TabIndex = 20;
             // 
             // buildingTextBox
             // 
             this.buildingTextBox.Location = new System.Drawing.Point(268, 337);
             this.buildingTextBox.Name = "buildingTextBox";
             this.buildingTextBox.Size = new System.Drawing.Size(191, 19);
-            this.buildingTextBox.TabIndex = 20;
+            this.buildingTextBox.TabIndex = 21;
             // 
             // cityTextBox
             // 
             this.cityTextBox.Location = new System.Drawing.Point(266, 295);
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(193, 19);
-            this.cityTextBox.TabIndex = 21;
+            this.cityTextBox.TabIndex = 17;
             // 
             // pNameTextBox
             // 
             this.pNameTextBox.Location = new System.Drawing.Point(264, 49);
             this.pNameTextBox.Name = "pNameTextBox";
             this.pNameTextBox.Size = new System.Drawing.Size(193, 19);
-            this.pNameTextBox.TabIndex = 22;
+            this.pNameTextBox.TabIndex = 3;
             // 
             // fNameKanaTextBox
             // 
             this.fNameKanaTextBox.Location = new System.Drawing.Point(33, 95);
             this.fNameKanaTextBox.Name = "fNameKanaTextBox";
             this.fNameKanaTextBox.Size = new System.Drawing.Size(191, 19);
-            this.fNameKanaTextBox.TabIndex = 23;
+            this.fNameKanaTextBox.TabIndex = 6;
             // 
             // pNameKanaTextBox
             // 
             this.pNameKanaTextBox.Location = new System.Drawing.Point(266, 95);
             this.pNameKanaTextBox.Name = "pNameKanaTextBox";
             this.pNameKanaTextBox.Size = new System.Drawing.Size(191, 19);
-            this.pNameKanaTextBox.TabIndex = 24;
+            this.pNameKanaTextBox.TabIndex = 7;
             // 
             // DataForm
             // 

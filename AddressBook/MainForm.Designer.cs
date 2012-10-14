@@ -49,7 +49,7 @@
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.nameIndex = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.registButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -98,7 +98,7 @@
             this.dataGridView.RowTemplate.Height = 21;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(706, 285);
-            this.dataGridView.TabIndex = 0;
+            this.dataGridView.TabIndex = 7;
             // 
             // Column1
             // 
@@ -305,25 +305,26 @@
             this.nameIndex.Location = new System.Drawing.Point(28, 104);
             this.nameIndex.Name = "nameIndex";
             this.nameIndex.Size = new System.Drawing.Size(411, 51);
-            this.nameIndex.TabIndex = 13;
+            this.nameIndex.TabIndex = 6;
             this.nameIndex.TabStop = false;
             this.nameIndex.Text = "索引";
             // 
-            // button1
+            // registButton
             // 
-            this.button1.Location = new System.Drawing.Point(578, 462);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "登録";
-            this.button1.UseVisualStyleBackColor = true;
+            this.registButton.Location = new System.Drawing.Point(578, 462);
+            this.registButton.Name = "registButton";
+            this.registButton.Size = new System.Drawing.Size(75, 23);
+            this.registButton.TabIndex = 9;
+            this.registButton.Text = "登録";
+            this.registButton.UseVisualStyleBackColor = true;
+            this.registButton.Click += new System.EventHandler(this.registButton_Click);
             // 
             // updateButton
             // 
             this.updateButton.Location = new System.Drawing.Point(659, 462);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(75, 23);
-            this.updateButton.TabIndex = 15;
+            this.updateButton.TabIndex = 10;
             this.updateButton.Text = "更新";
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
@@ -333,7 +334,7 @@
             this.button3.Location = new System.Drawing.Point(28, 462);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 16;
+            this.button3.TabIndex = 8;
             this.button3.Text = "詳細表示";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -342,7 +343,7 @@
             this.button4.Location = new System.Drawing.Point(460, 59);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 17;
+            this.button4.TabIndex = 5;
             this.button4.Text = "検索";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -352,14 +353,14 @@
             this.comboBox1.Location = new System.Drawing.Point(275, 63);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 20);
-            this.comboBox1.TabIndex = 18;
+            this.comboBox1.TabIndex = 4;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(28, 63);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(226, 19);
-            this.textBox1.TabIndex = 19;
+            this.textBox1.TabIndex = 3;
             // 
             // label1
             // 
@@ -367,7 +368,7 @@
             this.label1.Location = new System.Drawing.Point(26, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 20;
+            this.label1.TabIndex = 1;
             this.label1.Text = "姓名";
             // 
             // label2
@@ -376,7 +377,7 @@
             this.label2.Location = new System.Drawing.Point(273, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 21;
+            this.label2.TabIndex = 2;
             this.label2.Text = "都道府県";
             // 
             // menuStrip
@@ -388,7 +389,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(775, 24);
-            this.menuStrip.TabIndex = 22;
+            this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
             // ファイルFToolStripMenuItem
@@ -510,7 +511,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.updateButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.registButton);
             this.Controls.Add(this.nameIndex);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menuStrip);
@@ -543,7 +544,7 @@
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.GroupBox nameIndex;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button registButton;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

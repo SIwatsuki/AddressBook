@@ -22,6 +22,13 @@ namespace AddressBook
             setInputData(dataRow);
         }
 
+
+        private DataForm()
+        {
+            InitializeComponent();
+            initComboBox();
+        }
+
         /// <summary>
         /// 住所録データ更新
         /// </summary>
@@ -38,9 +45,19 @@ namespace AddressBook
             return dataForm.retRow;
         }
 
+        public static DataRow RegistNewData(DataTable refDataTable, DataRow newDataRow)
+        {
+            DataForm dataForm = new DataForm(newDataRow);
+            dataForm.refDataTable = refDataTable.Clone();
+            dataForm.ShowDialog();
+            dataForm.Dispose();
+
+            return dataForm.retRow;
+        }
+
+
         private void DataForm_Load(object sender, EventArgs e)
         {
-            // コンボボックス初期化
 
         }
 
@@ -89,6 +106,11 @@ namespace AddressBook
             retRow["建物"] =buildingTextBox.Text;
         }
 
+        /// <summary>
+        /// 登録や更新などのボタン
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, EventArgs e)
         {
             // 画面入力データを戻り値のDataRowへ格納する
@@ -96,6 +118,9 @@ namespace AddressBook
             this.Close();
         }
 
+        /// <summary>
+        /// 都道府県コンボボックス中身作成
+        /// </summary>
         private void initComboBox()
         {
             string[] pref = new string[47]{"北海道"
@@ -146,6 +171,16 @@ namespace AddressBook
                                             ,"鹿児島県" 
                                             ,"沖縄県" };
             this.prefComboBox.Items.AddRange(pref);
+        }
+
+        /// <summary>
+        /// 閉じるボタン押下時イベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }
